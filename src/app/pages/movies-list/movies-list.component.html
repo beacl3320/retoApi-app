@@ -1,0 +1,13 @@
+<div class="movie">
+  <h1>Películas</h1>
+  <div class= movie__content>
+
+    <div class="movie__content-box" *ngFor='let movie of movieList'>
+      <h2>{{movie.title}}</h2>
+      <!-- <h3>{{movie.original_title}}</h3> -->
+      <img src ='http://image.tmdb.org/t/p/w185{{movie.poster_path}}' alt='imagen pelicula'>
+      <!-- <p>{{movie.overview}}</p> -->
+      <!-- <p>{{movie.id}} - {{movie.genre_ids}}</p> -->
+  </div>
+  </div>
+</div>
