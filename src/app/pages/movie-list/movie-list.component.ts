@@ -1,7 +1,7 @@
-
+import { MovieResponse } from './../movies-list/models/movie-response';
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../movies-list/models/movie';
 import { TheMoviesServicesService } from 'src/app/services/the-movies-services.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,17 +11,13 @@ import { TheMoviesServicesService } from 'src/app/services/the-movies-services.s
 })
 export class MovieListComponent implements OnInit {
 
-  movies: Movie[] = [];
+  movies$: Observable<MovieResponse>;
 
   constructor(private theMoviesServicesService: TheMoviesServicesService) { }
 
   ngOnInit(): void {
-    console.log('El componente se ha inicializado');
-    this.theMoviesServicesService.getAllMovies().subscribe(
-      (res) => {
-        this.movies = res.results;
-      },
-    )
+    /* console.log('El componente se ha inicializado'); */
+    this.movies$ = this.theMoviesServicesService.getAllMovies()
   }
 
 }
