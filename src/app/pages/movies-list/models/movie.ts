@@ -10,6 +10,3 @@ export interface Movie {
   vote_acount: number,
 };
 
-/* export interface MovieResponse {
-
-} */
