@@ -1,12 +1,9 @@
 <div class="movie">
   <h1>Películas</h1>
   <div class="movie__content">
-
-    <div class="movie__content-box" *ngFor=" let movie of (movies$ | async)?.results">
-      <h2>Título: {{movie.title}}</h2>
-      <!-- <h4>{{movie.overview}}</h4> -->
-      <img src ='http://image.tmdb.org/t/p/w185{{movie.poster_path}}' alt='imagen pelicula'>
-      <h5>{{movie.genre_ids}}</h5>
-    </div>
+    <app-movie-item
+      *ngFor="let movie of (movies$ | async)?.results"
+      [movie]="movie"
+    ></app-movie-item>
   </div>
 </div>
