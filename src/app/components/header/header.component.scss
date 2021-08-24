@@ -2,5 +2,7 @@
   padding-left: 50px;
   display: flex;
   flex-wrap: wrap;
-
+  &.active{
+    background-color: cadetblue;
+  }
 }
