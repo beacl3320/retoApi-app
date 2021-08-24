@@ -1,7 +1,7 @@
 
 
   <div class="movie__content">
-    <div class="movie__content-box">
+    <div class="movie__content-box" (click)='movieSelected.emit(movie)'>
       <h2>Título: {{movie.title}}</h2>
       <!-- <h4>{{movie.overview}}</h4> -->
       <img src ='http://image.tmdb.org/t/p/w185{{movie.poster_path}}' alt='imagen pelicula'>

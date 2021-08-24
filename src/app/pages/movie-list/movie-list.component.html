@@ -4,6 +4,7 @@
     <app-movie-item
       *ngFor="let movie of (movies$ | async)?.results"
       [movie]="movie"
+      (movieSelected) = 'setMovie($event)'
     ></app-movie-item>
   </div>
 </div>
