@@ -1,0 +1,14 @@
+.popular__content{
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+h1{
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+  font-weight: bold;
+}
