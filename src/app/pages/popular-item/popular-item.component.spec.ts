@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PopulityItemComponent } from './populity-item.component';
+import { PopularItemComponent } from './popular-item.component';
 
-describe('PopulityItemComponent', () => {
-  let component: PopulityItemComponent;
-  let fixture: ComponentFixture<PopulityItemComponent>;
+describe('PopularItemComponent', () => {
+  let component: PopularItemComponent;
+  let fixture: ComponentFixture<PopularItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PopulityItemComponent ]
+      declarations: [ PopularItemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PopulityItemComponent);
+    fixture = TestBed.createComponent(PopularItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

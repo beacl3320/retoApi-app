@@ -1,0 +1,6 @@
+<div class="popular">
+<h1>Películas Populares</h1>
+  <div class="popular__content">
+    <app-popular-item *ngFor="let popular of (populares$ | async)?.results" [popular] = 'popular'></app-popular-item>
+  </div>
+</div>

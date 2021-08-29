@@ -11,6 +11,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MoviesListComponent } from './pages/movies-list/movies-list.component';
 import { MovieListComponent } from './pages/movie-list/movie-list.component';
 import { MovieItemComponent } from './pages/movie-item/movie-item.component';
+import { PopularListComponent } from './pages/popular-list/popular-list.component';
+import { PopularItemComponent } from './pages/popular-item/popular-item.component';
 
 
 
@@ -23,8 +25,9 @@ import { MovieItemComponent } from './pages/movie-item/movie-item.component';
     SpinnerComponent,
     MoviesListComponent,
     MovieListComponent,
-    MovieItemComponent
-
+    MovieItemComponent,
+    PopularItemComponent,
+    PopularListComponent,
   ],
   imports: [
     BrowserModule,

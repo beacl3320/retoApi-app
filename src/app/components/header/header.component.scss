@@ -1,8 +1,15 @@
 .navbar2{
-  padding-left: 50px;
+  /* padding-left: 20px; */
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  &.active{
-    background-color: cadetblue;
-  }
+  border-radius: 8px;
+  width: 180px;
+}
+
+a.active{
+  background-color: rgb(109, 235, 240);
+}
+a:hover{
+  background-color: rgba(22, 165, 170, 0.589);
 }
