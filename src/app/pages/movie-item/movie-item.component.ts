@@ -9,8 +9,8 @@ import { Movie } from '../../pages/models/movie';
 export class MovieItemComponent implements OnInit {
   @Input()
   movie: Movie
-  @Output()
-  movieSelected = new EventEmitter<Movie>();
+  /* @Output()
+  movieSelected = new EventEmitter<Movie>(); */
 
   constructor() { }
 

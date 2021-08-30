@@ -21,8 +21,8 @@ export class MovieListComponent implements OnInit {
     this.movies$ = this.theMoviesServicesService.getAllMovies()
   }
 
-  setMovie(movie: Movie): void {
+  /* setMovie(movie: Movie): void {
     console.log(movie)
-  }
+  } */
 
 }
