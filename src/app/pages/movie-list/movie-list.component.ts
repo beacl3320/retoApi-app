@@ -1,7 +1,7 @@
-import { MovieResponse } from './../movies-list/models/movie-response';
+import { MovieResponse } from '../models/movie-response';
 import { Component, OnInit } from '@angular/core';
 import { TheMoviesServicesService } from 'src/app/services/the-movies-services.service';
-import { Movie } from '../movies-list/models/movie';
+import { Movie } from '../../pages/models/movie';
 import { Observable } from 'rxjs';
 
 

@@ -1,5 +1,5 @@
 import { PopularService } from '../../services/popular.service';
-import { PopularResponse } from '../movies-list/models/popular-response.interface';
+import { PopularResponse } from '../../pages/models/popular-response.interface';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 

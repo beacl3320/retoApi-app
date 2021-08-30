@@ -21,7 +21,7 @@ export class TheMoviesServicesService {
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { MovieResponse } from "../pages/movies-list/models/movie-response";
+import { MovieResponse } from "../pages/models/movie-response";
 
 @Injectable({
   providedIn: 'root'

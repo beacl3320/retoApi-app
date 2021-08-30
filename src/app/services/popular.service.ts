@@ -1,4 +1,4 @@
-import { PopularResponse } from '../pages/movies-list/models/popular-response.interface';
+import { PopularResponse } from '../pages/models/popular-response.interface';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';

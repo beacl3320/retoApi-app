@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Popular } from '../movies-list/models/popular.model';
+import { Popular } from '../../pages/models/popular.model';
 
 @Component({
   selector: 'app-popular-item',
