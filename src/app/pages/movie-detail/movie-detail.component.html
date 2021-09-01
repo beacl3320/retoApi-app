@@ -1,7 +1,7 @@
 <div class="movie__content" *ngIf="movie$ | async as movie" >
   <div class="movie__content-box" >
     <h2>Título: {{movie.title}}</h2>
-    <!-- <h4>{{movie.overview}}</h4> -->
     <img src ='http://image.tmdb.org/t/p/w185{{movie.poster_path}}' alt='{{movie.title}}'>
+    <h3>Descripción: {{movie.overview}}</h3>
   </div>
 </div>

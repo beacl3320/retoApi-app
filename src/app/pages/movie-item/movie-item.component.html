@@ -1,12 +1,19 @@
 
 
-  <div class="movie__content" routerLink="/movie/{{movie.id}}">
+ <!--  <div class="movie__content" routerLink="/movie/{{movie.id}}">
     <div class="movie__content-box" >
       <h2>Título: {{movie.title}}</h2>
-      <!-- <h4>{{movie.overview}}</h4> -->
       <img src ='http://image.tmdb.org/t/p/w185{{movie.poster_path}}' alt={{movie.title}}>
       <h5>{{movie.genre_ids}}</h5>
     </div>
+  </div> -->
+
+  <div class="card" style="width: 18rem; height: 450px" class="p-50" routerLink="/movie/{{movie.id}}">
+    <img  class="rounded mx-auto d-block" alt="Responsive image" src="http://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="Card image cap">
+    <h2 class="text-center pt-3 text-muted">{{movie.title}}</h2>
+    <!-- <div class="card-body">
+      <p class="card-text">{{movie.overview}}</p>
+    </div> -->
   </div>
 
 
