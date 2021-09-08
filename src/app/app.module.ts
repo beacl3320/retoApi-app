@@ -29,7 +29,9 @@ import { PopularItemComponent } from './pages/popular-item/popular-item.componen
     MovieItemComponent,
     PopularItemComponent,
     PopularListComponent,
+
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

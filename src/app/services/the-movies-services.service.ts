@@ -38,9 +38,9 @@ export class TheMoviesServicesService {
   }
   getMovieById(id: string):Observable<Movie>{
     return this.httpClient.get<Movie>(
-      /* 'https://api.themoviedb.org/3/movie/upcoming?api_key=1a8dd1775176c33f207ec8b1dbf63559&language=es-ES&page=1/' +id */
       'https://api.themoviedb.org/3/movie/550?api_key=1a8dd1775176c33f207ec8b1dbf63559&language=es-ES/' +id
       /* 'https://api.themoviedb.org/3/movie/{movie_id}?api_key=1a8dd1775176c33f207ec8b1dbf63559&language=es-ES/' +id */
-    )
+      /* 'https://api.themoviedb.org/3/movie/upcoming?api_key=1a8dd1775176c33f207ec8b1dbf63559&language=es-ES&page=1/' + id */
+      )
   }
 }
