@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MoviesListComponent } from './pages/movies-list/movies-list.component';
 import { MovieListComponent } from './pages/movie-list/movie-list.component';
 import { MovieItemComponent } from './pages/movie-item/movie-item.component';
@@ -23,7 +22,6 @@ import { PopularItemComponent } from './pages/popular-item/popular-item.componen
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    SpinnerComponent,
     MoviesListComponent,
     MovieListComponent,
     MovieItemComponent,

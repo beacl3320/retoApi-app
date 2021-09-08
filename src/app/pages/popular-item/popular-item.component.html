@@ -5,7 +5,7 @@
 <div class="d-flex pb-5">
   <div class="card m-1 border border-primary rounded align-items-center"  routerLink="/movie/{{popular.title}}">
     <div class="d-flex justify-content-center align-items-center flex-wrap p-3">
-      <img class="col-3" alt="Responsive image" src="http://image.tmdb.org/t/p/w185{{popular.poster_path}}" alt="Card image cap">
+      <img class="col-3" alt="{{popular.title}}" src="http://image.tmdb.org/t/p/w185{{popular.poster_path}}" alt="Card image cap">
       <h2 class="text-center p-2 text-info col-3 text-break">{{popular.title}}</h2>
         <p class="card-text col-6 text-break">{{popular.overview}}</p>
     </div>
