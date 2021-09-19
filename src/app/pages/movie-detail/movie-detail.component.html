@@ -1,8 +1,15 @@
-<div class="movie__content" *ngIf="movie$ | async as movie" >
+<!-- <div class="movie__content" *ngIf="movie$ | async as movie" >
   <div class="movie__content-box" >
     <h2>Hola</h2>
     <h2>Título: {{movie.title}}</h2>
     <img src ='http://image.tmdb.org/t/p/w185{{movie.poster_path}}' alt='imagen pelicula'>
     <h3>Descripción: {{movie.overview}}</h3>
   </div>
-</div>
+</div> -->
+
+  <div class="container">
+    <h2>Detalle de Película</h2>
+    <h2>Titulo: {{id}}</h2>
+    <h2>Descripción: {{overview}}</h2>
+  </div>
+

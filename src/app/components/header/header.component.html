@@ -7,8 +7,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Search..." name="filterMovie" [(ngModel)]='filterMovie' aria-label="Search">
         <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+        <div *ngFor="let movie of movies$ | filterPipe: filterMovie">
+          <p>{{ movie.id }}</p>
+          <p>{{ movie.title }}</p>
+        </div>
       </form>
     </div>
   </div>

@@ -36,12 +36,16 @@ import { Movie } from '../models/movie';
 })
 export class MovieDetailComponent implements OnInit {
   movie$: Observable<Movie>
+  id: string = null;
+  overview: string = null;
 
   constructor(private route:ActivatedRoute, private theMoviesServicesService: TheMoviesServicesService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.movie$ = this.theMoviesServicesService.getMovieById(params.id);
+      this.movie$ = this.theMoviesServicesService.getMovieById(params.id, params.overview);
+      this.id = params.id;
+      this.overview = params.overview;
       console.log(params);
     })
   }
