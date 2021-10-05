@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TheMoviesServicesService } from 'src/app/services/the-movies-services.service';
 import { Movie } from '../models/movie';
-import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-movie-detail',
@@ -12,19 +11,21 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MovieDetailComponent implements OnInit {
   movie$: Observable<Movie>
+  id: string;
 
   constructor(private route:ActivatedRoute, private theMoviesServicesService: TheMoviesServicesService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.movie$ = this.theMoviesServicesService.getMovieById(params.id);
-    });
+      this.id = params.id;
+      console.log(params);
+    })
   }
 
 } */
 
-import { Observable } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TheMoviesServicesService } from 'src/app/services/the-movies-services.service';
 import { Movie } from '../models/movie';
@@ -35,19 +36,26 @@ import { Movie } from '../models/movie';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent implements OnInit {
-  movie$: Observable<Movie>
-  id: string = null;
+  Movie: Movie;
+  id: number = null;
+  title: string = null;
+  poster_path: string = null;
   overview: string = null;
-
   constructor(private route:ActivatedRoute, private theMoviesServicesService: TheMoviesServicesService) { }
-
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.movie$ = this.theMoviesServicesService.getMovieById(params.id, params.overview);
-      this.id = params.id;
-      this.overview = params.overview;
-      console.log(params);
-    })
+    this.route.params.subscribe(params =>{
+      this.theMoviesServicesService.getMovieById(params.id).subscribe(
+        (res) => {
+          this.Movie = res;
+          console.log(this.Movie);
+          this.id = res.id;
+          this.title = res.title;
+          this.poster_path = res.poster_path;
+          this.overview = res.overview;
+        },
+        (error) => {
+          console.error(error)
+        });
+    });
   }
-
 }
