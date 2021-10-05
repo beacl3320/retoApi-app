@@ -1,8 +1,16 @@
   <div class="container">
-    <h2>Detalle de Película</h2>
-    <h3>ID: {{id}}</h3>
-    <h3>Title: {{title}}</h3>
-    <h4>Overview: {{overview}}</h4>
-    <img alt="Responsive image" src="http://image.tmdb.org/t/p/w185{{poster_path}}">
-  </div>
-
+    <h1>Detalle de Película</h1>
+    <div class="card border-0 mb-3" >
+      <div class="row g-0 ">
+        <div class="col-md-4 d-flex justify-content-center ">
+          <img alt="Responsive image" src="http://image.tmdb.org/t/p/w185{{poster_path}}" class="img-fluid rounded-start img">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title text-info">Titulo: {{title}}</h2>
+            <p class="card-text">Overview: {{overview}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
