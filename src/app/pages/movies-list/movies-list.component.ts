@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/* import { Component, OnInit } from '@angular/core';
 import { TheMoviesServicesService } from 'src/app/services/the-movies-services.service';
 import { Movie } from '../../pages/models/movie';
 
@@ -35,4 +35,4 @@ export class MoviesListComponent implements OnInit {
     })
   }
 
-}
+} */
