@@ -1,18 +1,21 @@
-<div class="container">
-<div class="d-flex pb-5">
-  <div class="card m-1 border-0 rounded align-items-center">
-    <div class="d-flex justify-content-center align-items-center flex-wrap p-3">
-      <img class="col-3 img-fluid" alt="{{popular.title}}" src="http://image.tmdb.org/t/p/w185{{popular.poster_path}}" alt="Card image cap">
-      <h2 class="text-center p-2 text-info col-3 text-break">{{popular.title}}</h2>
-        <p class="card-text col-6 text-break">{{popular.overview}}</p>
+<div class="card m-2 pt-4 border-0" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        class="img-fluid rounded-start"
+        alt="{{ popular.title }}"
+        src="http://image.tmdb.org/t/p/w185{{ popular.poster_path }}"
+        alt="image responsive"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body p-0">
+        <h2 class="card-title text-info">{{popular.title}}</h2>
+        <p class="card-text ">{{popular.overview}}</p>
+      </div>
     </div>
   </div>
 </div>
-</div>
-
-
-
-
 
 
 
