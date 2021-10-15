@@ -1,3 +1,4 @@
+import { Movie } from 'src/app/pages/models/movie';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,14 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipePipe implements PipeTransform {
 
-  transform(value: any, arg: any[]): any {
-    const resultMovie = [];
-    for(const movie of value){
-      if(movie.title.tolowerCase().indexOf(arg) > -1){
+  transform(listMovies: any[], text:string): any[] {
+    if(!text) return listMovies
+    return listMovies.filter(movie => movie.toUppercase().includes(text.toUpperCase()))
 
-        console.log('hola')
-        resultMovie.push(movie);
-      }
-      }
-      return resultMovie;
   }}

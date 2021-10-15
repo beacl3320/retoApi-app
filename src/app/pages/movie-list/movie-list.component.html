@@ -3,7 +3,7 @@
   <div class="movie__content">
     <app-movie-item
       *ngFor="let movie of (movies$ | async)?.results"
-      [movie]="movie"
+      [movie]="movie | filterPipe:filterValue"
       (movieSelected) = 'setMovie($event)'
     ></app-movie-item>
   </div>
