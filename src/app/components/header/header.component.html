@@ -1,11 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info sticky-top ">
-  <div class="container-fluid">
+<nav class="container-fluid navbar navbar-expand-lg navbar-light bg-info sticky-top">
+  <div class="d-flex flex-row ">
     <a routerLink="movies" routerLinkActive="active" class="navbar-brand col-2 navbar2">Películas Nuevas</a>
     <a routerLink="popular" routerLinkActive="active" class="navbar-brand col-2 navbar2 " >Películas Polulares</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  </div>
+    <div d-flex flex-column-reverse>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search..." name="filterMovie" [(ngModel)]='filterMovie' aria-label="Search">
         <div *ngFor="let movie of movies$ | filterPipe: filterMovie">
@@ -13,8 +16,8 @@
           <p>{{ movie.title }}</p>
         </div>
       </form>
-    </div>
-  </div>
+    </div> -->
+    <app-search (search)='handleSearch($event)'></app-search>
 </nav>
 
 

@@ -15,8 +15,14 @@ export class HeaderComponent implements OnInit {
 
   constructor(private theMoviesServicesService: TheMoviesServicesService) { }
 
-  filterMovie = '';
   movie: Movie;
+
+  handleSearch(value: string){
+    console.log(value);
+    this.filterValue = value;
+  }
+
+  filterValue = '';
 
   ngOnInit(): void {
     this.movies$ = this.theMoviesServicesService.getAllMovies()
